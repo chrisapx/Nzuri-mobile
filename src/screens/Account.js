@@ -1,10 +1,15 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import Footer from "../components/Footer";
 
 const Account = () => {
   return (
-    <View>
-      <Text>This is the </Text>
+    <View style={styles.container}>
+      <View >
+        <Text>This is the Account page</Text>
+      </View>
+
+       <Footer />
     </View>
   );
 };
@@ -16,7 +21,9 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 
-  vavs: {
+  contentContainer: {
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

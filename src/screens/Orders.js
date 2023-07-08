@@ -2,11 +2,11 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Footer from "../components/Footer";
 
-const Home = () => {
+const Orders = () => {
   return (
     <View style={styles.container}>
       <View >
-        <Text>This is the home page</Text>
+        <Text>This is the Orders page</Text>
       </View>
 
        <Footer />
@@ -14,7 +14,7 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Orders;
 
 const styles = StyleSheet.create({
   container: {
