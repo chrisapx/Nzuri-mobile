@@ -1,7 +1,5 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import Footer from "../components/Footer";
-import SearchBar from "../components/SearchBar";
 import { Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
