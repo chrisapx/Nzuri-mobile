@@ -27,6 +27,8 @@ export default function App() {
       <stack.Navigator
       // changing navigator settings
       screenOptions={{
+        headerShadowVisible: false,
+        headerTitleAlign: "center",
         cardStyleInterpolator: ({ current: { progress } }) => ({
           cardStyle: {
             opacity: progress.interpolate({
@@ -56,67 +58,21 @@ export default function App() {
           component={Home}
           options={
             {
-              headerTitleAlign: "center",
               // headerRight: () => <HomeButton />,
               // headerLeft: () => <Profile />,
             }
           }
         />
-        <stack.Screen name="Varieties" component={Varieties} 
-        options={
-          {
-            headerTitleAlign: "center",
-          }
-        }/>
-        <stack.Screen name="Details" component={Details} 
-        options={
-          {
-            headerTitleAlign: "center",
-          }
-        }/>
-        <stack.Screen name="Payment" component={Payment} 
-        options={
-          {
-            headerTitleAlign: "center",
-          }
-        }/>
-        <stack.Screen name="Orders" component={Orders} 
-        options={
-          {
-            headerTitleAlign: "center",
-          }
-        }/>
-        <stack.Screen name="Search" component={Search} 
-        options={
-          {
-            headerTitleAlign: "center",
-          }
-        }/>
-        <stack.Screen name="Account" component={Account} 
-        options={
-          {
-            headerTitleAlign: "center",
-          }
-        }/>
+        <stack.Screen name="Varieties" component={Varieties} />
+        <stack.Screen name="Details" component={Details} />
+        <stack.Screen name="Payment" component={Payment} />
+        <stack.Screen name="Orders" component={Orders} />
+        <stack.Screen name="Search" component={Search} />
+        <stack.Screen name="Account" component={Account} />
 
-        <stack.Screen name="Settings" component={Settings} 
-        options={
-          {
-            headerTitleAlign: "center",
-          }
-        }/>
-        <stack.Screen name="About" component={About} 
-        options={
-          {
-            headerTitleAlign: "center",
-          }
-        }/>
-        <stack.Screen name="Confirmation" component={Confirmation} 
-        options={
-          {
-            headerTitleAlign: "center",
-          }
-        }/>
+        <stack.Screen name="Settings" component={Settings} />
+        <stack.Screen name="About" component={About} />
+        <stack.Screen name="Confirmation" component={Confirmation} />
         <stack.Screen name="Error" component={Error} />
         {/* <stack.Screen name="Varieties" component={Varieties} />
         <stack.Screen name="Varieties" component={Varieties} />

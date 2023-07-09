@@ -1,16 +1,24 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import Footer from "../components/Footer";
+import SearchBar from "../components/SearchBar";
 
 const Search = () => {
   return (
     <View style={styles.container}>
-      <View >
-        <Text>This is the Search page</Text>
-      </View>
+      
+      <SafeAreaView>
+        <SearchBar />
+        
+        <View >
+          <Text>This is the Search page</Text>
+        </View>
+
+      </SafeAreaView>
 
        <Footer />
     </View>
+    
   );
 };
 
