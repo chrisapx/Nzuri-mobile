@@ -7,7 +7,7 @@ import { useNavigation } from "@react-navigation/native";
 
 const AccItem = ({item, linkTo}) => {
 
-    const navigation = useNavigation();
+  const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
@@ -17,7 +17,7 @@ const AccItem = ({item, linkTo}) => {
                     <Text style={{fontSize:20 }}>{item}</Text>
                 </View>
                 <View style={styles.icon}>
-                    <Image source={require('../utils/go.png')} 
+                    <Image source={require('../assets/icons/go.png')} 
                         alt="Go"
                         // style={{ width: 25, height: 25 }}
                         resizeMode="contain"
