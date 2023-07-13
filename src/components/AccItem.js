@@ -3,29 +3,26 @@ import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from "react-na
 import { Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-const AccItem = ({item, linkTo}) => {
-
+const AccItem = ({ item, linkTo }) => {
   const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
-        {/* <TouchableOpacity onPress={()=> navigation.navigate({linkTo})}> */}
-            <View style={styles.secondCont}>
-                <View style={styles.text}>
-                    <Text style={{fontSize:20 }}>{item}</Text>
-                </View>
-                <View style={styles.icon}>
-                    <Image source={require('../assets/icons/go.png')} 
-                        alt="Go"
-                        // style={{ width: 25, height: 25 }}
-                        resizeMode="contain"
-                    />
-                </View>
-            </View>
-
-        <View style={styles.line}></View>
+      <View style={styles.secondCont}>
+        <View style={styles.leftContainer}>
+          <Text style={styles.text}>{item}</Text>
+        </View>
+        <View style={styles.rightContainer}>
+          <Image
+            source={require('../assets/icons/go.png')}
+            alt="Go"
+            resizeMode="contain"
+            style={styles.icon}
+          />
+        </View>
+      </View>
+      <View style={styles.line}></View>
     </View>
-    
   );
 };
 
@@ -35,29 +32,31 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  secondCont : {
-    flex: 1,
+  secondCont: {
     flexDirection: "row",
     justifyContent: "space-between",
     paddingHorizontal: 20,
-    paddingVertical: 15
+    paddingVertical: 15,
+    alignItems: "center",
   },
-  text : {
-    color: "#040000",
-    fontSize: 16,
-    fontWeight: 400,
+  leftContainer: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  text: {
+    fontSize: 20,
   },
   line: {
-    width: 300,
     height: 1,
     backgroundColor: "#C3C3C3",
-
+    marginHorizontal: 20,
+  },
+  rightContainer: {
+    marginLeft: 10,
   },
   icon: {
     width: 16.157,
     height: 20.069,
-    // transform: rotate(-179.551),
-    flexShrink: 0, 
   },
-  
 });
