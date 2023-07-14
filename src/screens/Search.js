@@ -10,9 +10,9 @@ const Search = () => {
       <SafeAreaView>
         <SearchBar />
         
-        <View >
+        {/* <View >
           <Text>This is the Search page</Text>
-        </View>
+        </View> */}
 
       </SafeAreaView>
 
